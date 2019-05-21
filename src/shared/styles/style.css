@@ -1,0 +1,280 @@
+/* start variabile */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    --black-color: black;
+    --primary-color: #0e4cbd;
+    --primary: #0e4cbd;
+    --gray: #F5F5F5;
+    --shadow: #DDE0E7;
+    --white: #DDE0E7;
+    --guide: #f5222d;
+    --guide-darken: #cf1322;
+    --guide-highlight-darken: #389e0d;
+    --guide-highlight: #52c41a;
+    --radius: 6px;
+    --transition: 0.3s;
+    --radius: 6px;
+    --m-xs: 480px;
+    --m-sm: 576px;
+    --m-md: 768px;
+    --m-lg: 992px;
+    --m-xl: 1200px;
+    --m-xxl: 1600px;
+    --layout-header-padding: 0;
+    --table-row-hover-bg: var(--gray);
+    background: var(--gray);
+    --margin-to-divide: 16px;
+}
+
+
+/* start typography */
+
+h1,
+h3 {
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 48px;
+    display: block;
+}
+
+h3 {
+    font-size: 36px;
+    color: var(--black-color);
+    display: block;
+}
+
+p {
+    font-size: 16px;
+}
+
+p #copyright {
+    margin-bottom: 0 !important;
+}
+
+
+/* end typography */
+
+
+/* start ESSENTIALS */
+
+.row {
+    background: white;
+}
+
+.wrapper {
+    min-height: 100vh;
+}
+
+.wrapper-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--gray);
+}
+
+.content {
+    /* background-color: var(--gray); */
+    padding: 16px 16px 0px 16px;
+}
+
+.box {
+    padding: 25px;
+    border-radius: var(--radius);
+    background-color: white;
+    box-shadow: 0px 10px 40px 5px rgba(var(--shadow), 0.3);
+    margin: 0 8px 16px 8px;
+    /* display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap; */
+}
+
+
+/* What extend do? */
+
+.box50 {
+    display: inline-block;
+    padding: 25px;
+    border-radius: var(--radius);
+    background-color: white;
+    box-shadow: 0px 10px 40px 5px rgba(var(--shadow), 0.3);
+    margin: 0 8px 16px 8px;
+}
+
+.box50 {
+    width: calc(50% - var(--margin-to-divide));
+}
+
+.box33 {
+    display: inline-block;
+    padding: 25px;
+    border-radius: var(--radius);
+    background-color: white;
+    box-shadow: 0px 10px 40px 5px rgba(var(--shadow), 0.3);
+    margin: 0 8px 16px 8px;
+}
+
+.box33 {
+    width: calc(33.33% - var(--margin-to-divide));
+}
+
+.box25 {
+    display: inline-block;
+    padding: 25px;
+    border-radius: var(--radius);
+    background-color: white;
+    box-shadow: 0px 10px 40px 5px rgba(var(--shadow), 0.3);
+    margin: 0 8px 16px 8px;
+}
+
+.box25 {
+    width: calc(25% - var(--margin-to-divide));
+}
+
+button {
+    color: var(--white);
+    background-color: var(--primary);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    max-width: 250px;
+    margin: auto;
+}
+
+button:hover {
+    background-color: lightblue;
+}
+
+button .group {
+    margin-left: 16px;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.single-right {
+    float: right;
+}
+
+.elements-right {
+    text-align: right;
+    float: right;
+    width: 100%;
+}
+
+.elements-center {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.image {
+    background: 100%;
+    height: 100%;
+    border-radius: var(--radius);
+    min-height: 300px;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+    [id^="50"] {
+        width: calc(100% - var(--margin-to-divide));
+    }
+    [id^="33"] {
+        width: calc(100% - var(--margin-to-divide));
+    }
+    [id^="25"] {
+        width: calc(100% - var(--margin-to-divide));
+    }
+    /* .box50,
+    .box33,
+    .box25 {
+        width: 100%;
+    } */
+    /* .box {
+        flex-direction: column;
+        width: 100%;
+    } */
+}
+
+
+/* END ESSENTIALS */
+
+
+/* START TEMPLATE GUIDES*/
+
+#enmagine.hide-guides .guide {
+    border: none;
+}
+
+#enmagine.hide-guides .label {
+    border: none;
+}
+
+#enmagine.show-guides .guide {
+    border: 2px solid #f5222d;
+    border-radius: 0;
+    position: relative;
+    margin-top: 40px;
+}
+
+#enmagine.show-guides .guide::before {
+    content: attr(id);
+    background-color: var(--guide-darken);
+    border: 2px solid var(--guide);
+    padding: 2px 6px;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 400;
+    position: absolute;
+    left: -2px;
+    top: -32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+
+#enmagine.show-guides .guide {
+    transition: 0.2s;
+}
+
+#enmagine.show-guides .guide:hover {
+    border: 2px solid var(--guide-highlight);
+}
+
+#enmagine.show-guides .guide:hover {
+    border: 2px solid var(--guide-highlight);
+}
+
+#enmagine.show-guides .guide:hover::before {
+    border: 2px solid var(--guide-highlight);
+    background-color: var(--guide-highlight-darken);
+}
+
+
+/* END TEMPLATE */

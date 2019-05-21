@@ -1,0 +1,38 @@
+.error {
+  text-align: center;
+  height: 100vh;
+  overflow: auto;
+  display: flex;
+  background: url(/media/404/bg_404.png) no-repeat center;
+  background-size: cover;
+  margin: -16px -16px 0 -16px;
+
+  &__content {
+    margin: auto;
+    padding: 10px;
+  }
+  
+  &__info {
+    color: #262626;
+    font-weight: 400;
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 25px;
+  }
+  
+  &__image {
+    max-width: 400px;
+    width: 100%;
+  }
+
+  button {
+    margin: 0;
+  }
+
+}
+
+@media only screen and (max-width: @m-lg) {
+  .error .error__info {
+    padding: 0 25px;
+  }
+}

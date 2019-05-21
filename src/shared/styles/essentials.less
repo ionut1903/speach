@@ -1,0 +1,86 @@
+.wrapper {
+  min-height: 100vh;
+}
+
+.wrapper-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: @gray;
+}
+
+.content {
+  background-color: @gray;
+  padding: 16px 16px 0px 16px;
+}
+
+.box {
+  padding: 35px 50px;
+  border-radius: @radius;
+  background-color: white;
+  box-shadow: 0px 10px 40px 5px rgba(@shadow, 0.3);
+  margin: 0 8px 16px 8px;
+
+
+  &50, &33, &25 {
+    &:extend(.box);
+    display: inline-block;
+  }
+
+  &50 {width: calc(50% - 16px)}
+  &33 {width: calc(33.33% - 16px)}
+  &25 {width: calc(25% - 16px)}
+}
+
+button {
+  color: @white;
+  background-color: @primary;
+  padding: 5px 16px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  max-width: 250px;
+  margin: auto;
+  &:hover {
+    background-color: rgba(@primary, 0.8);
+  }
+
+  .group {
+    margin-left: 16px;
+  }
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.single-right {
+  float: right;
+}
+
+.elements-right {
+  text-align: right;
+  float: right;
+  width: 100%;
+}
+
+.elements-center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+@media screen and (max-width: @m-lg) {
+  .box {
+    &50, &33, &25 {
+      width: calc(100% - 16px);
+    };
+  }
+}

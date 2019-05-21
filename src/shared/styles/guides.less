@@ -1,0 +1,48 @@
+
+#enmagine {
+  &.hide-guides {
+    .guide {
+      border: none;
+    }
+
+    .label {
+      display: none;
+    }
+  }
+
+  &.show-guides {
+    .guide {
+      border: 2px solid @guide;
+      border-radius: 0;
+      position: relative;
+      margin-top: 40px;
+      &:before {
+        content: attr(id);
+        background-color: darken(@guide, 10%);
+        border: 2px solid @guide;
+        padding: 2px 6px;
+        color: @white;
+        font-size: 16px;
+        font-weight: 400;
+        position: absolute;
+        left: -2px;
+        top: -32px;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.2s;
+      }
+
+      transition: 0.2s;
+
+      &:hover {
+        border: 2px solid @guide-highlight;
+        &:before {
+          border: 2px solid @guide-highlight;
+          background-color: darken(@guide-highlight, 10%);
+        }
+      }
+    }
+  }
+}
