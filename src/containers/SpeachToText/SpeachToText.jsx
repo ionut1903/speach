@@ -44,6 +44,7 @@ export default class SpeachToText extends Component {
             // that.onCommand("create image as image header in header content");
             // that.onCommand("create title as title header in header content with Hello world on center");
             // that.onCommand("download page");
+            that.onCommand("create title as title header in header content with Hello Hello on center");
             // that.onCommand("toggle guide");
             // that.onCommand("restart page");
             // that.onCommand("delete iddddd");
