@@ -44,7 +44,7 @@ h1,
 h3 {
     font-weight: 700;
     line-height: 1;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
 h1 {
@@ -99,9 +99,6 @@ p #copyright {
     background-color: white;
     box-shadow: 0px 10px 40px 5px rgba(var(--shadow), 0.3);
     margin: 0 8px 16px 8px;
-    /* display: flex;
-    display: -webkit-flex;
-    flex-wrap: wrap; */
 }
 
 
@@ -113,7 +110,11 @@ p #copyright {
     border-radius: var(--radius);
     background-color: white;
     box-shadow: 0px 10px 40px 5px rgba(var(--shadow), 0.3);
-    margin: 0 8px 16px 8px;
+    margin: 0 8px 8px 8px;
+    /* background-color: yellow; */
+    /* height: 500px; */
+    vertical-align: top;
+    padding-left: 0px;
 }
 
 .box50 {
@@ -126,7 +127,7 @@ p #copyright {
     border-radius: var(--radius);
     background-color: white;
     box-shadow: 0px 10px 40px 5px rgba(var(--shadow), 0.3);
-    margin: 0 8px 16px 8px;
+    margin: 0 8px 8px 8px;
 }
 
 .box33 {
@@ -136,14 +137,16 @@ p #copyright {
 .box25 {
     display: inline-block;
     padding: 25px;
+    padding-left: 0px;
+    margin-left: 0px;
     border-radius: var(--radius);
     background-color: white;
     box-shadow: 0px 10px 40px 5px rgba(var(--shadow), 0.3);
-    margin: 0 8px 16px 8px;
+    margin: 0 8px 16px 0px;
 }
 
 .box25 {
-    width: calc(25% - var(--margin-to-divide));
+    width: calc(25% - 8px);
 }
 
 button {
@@ -159,7 +162,7 @@ button {
 }
 
 button:hover {
-    background-color: lightblue;
+    opacity: 0.5;
 }
 
 button .group {
@@ -195,7 +198,7 @@ button .group {
     background: 100%;
     height: 100%;
     border-radius: var(--radius);
-    min-height: 300px;
+    min-height: 400px;
     max-width: 100%;
 }
 

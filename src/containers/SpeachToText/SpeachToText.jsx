@@ -49,14 +49,13 @@ export default class SpeachToText extends Component {
             // that.onCommand("restart page");
             // that.onCommand("delete iddddd");
 
-
             // recognition.start();
         });
     }
 
     render() {
         return (
-            <div style={{ width: "100%", height: "80px", background: "white" }}>
+            <div style={{ width: "100%", height: "80px", display: "flex", justifyContent: "center" }}>
                 <button id='btnGiveCommand'>Give Command!</button>
                 <br /><br />
                 <span id='message'></span>

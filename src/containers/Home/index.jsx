@@ -10,17 +10,16 @@ class HomePage extends Component {
     window.addEventListener("keydown", this.toggleGuideStatus, false);
 
     this.createElement('row', 'header');
-    this.createElement('box', 'headerTitle', 'header');
-    this.createElement('title', 'headerTitle', 'headerTitle', 'Welcome master!', 'center');
+
     this.createElement('box', 'headerContent', 'header');
     this.createElement('image', 'image', 'headerContent');
 
+    this.createElement('row', 'article');
+    this.createElement('box', 'subtitle', 'article');
+    this.createElement('title', 'headerTitle', 'subtitle', 'Where does it come from?', 'left');
+    this.createElement('text', 'headerTitle', 'subtitle', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'left');
+
     this.createElement('row', 'articleDescription');
-    this.createElement('box', 'subtitleContent', 'articleDescription');
-    this.createElement('title', 'headerTitle', 'subtitleContent', 'Where does it come from?', 'left');
-    this.createElement('text', 'headerTitle', 'subtitleContent', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'left');
-
-
     this.createElement('box', 'subtitleContent', 'articleDescription');
     this.createElement('subtitle', 'headerTitle', 'subtitleContent', 'Where does it come from?', 'left');
     this.createElement('text', 'headerTitle', 'subtitleContent', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'left');
@@ -72,52 +71,6 @@ class HomePage extends Component {
     this.createElement('image', 'image', '25-3');
     this.createElement('box25', '25-4', 'multipleImagesContainer');
     this.createElement('image', 'image', '25-4');
-
-    this.createElement('row', 'dummy');
-    this.createElement('box', 'dummyContainer', 'dummy');
-    this.createElement('box50', 'img', 'dummyContainer');
-    this.createElement('image', 'image', 'img');
-    this.createElement('box50', 'img2', 'dummyContainer');
-
-    // this.createElement('row', 'title');
-    // // this.createElement('row', 'titleContent', 'header');
-    // this.createElement('title', 'headerTitle', 'title', 'Where does it come from?', 'left');
-    // this.createElement('text', 'headerTitle', 'title', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'left');
-
-    // this.createElement('row', 'subtitle');
-    // // this.createElement('row', 'titleContent', 'header');
-    // this.createElement('subtitle', 'headerTitle', 'title', 'Where does it come from?', 'left');
-    // this.createElement('text', 'headerTitle', 'title', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'left');
-
-
-    // this.createElement('box50', 'imageBox', 'header');
-    // this.createElement('image', 'image', 'imageBox');
-
-    // this.createElement('subtitle', 'headerSubtitle', 'headerContent', 'Marvelous', 'right');
-    // this.createElement('text', 'headerDescription', 'headerContent', 'Lipsum dolor sit amet.');
-
-    // this.createElement('button', 'cta1', 'headerContent', 'Download File');
-    // this.createElement('button', 'cta2', 'headerContent', 'Download File', 'right');
-
-    // this.createElement('row', 'section-2');
-    // this.createElement('box50', '50-1', 'section-2');
-    // this.createElement('box', 'tester', '50-1', '', 'right');
-    // this.createElement('subtitle', 'sectionSubtitle', 'tester', 'Hello world');
-    // this.createElement('text', 'sectionText', 'tester', 'Lorem ipsum dolor sit amet...');
-    // this.createElement('button', 'sectionButton', 'tester', 'Learn More');
-
-    // this.createElement('box50', '50-2', 'section-2');
-
-    // this.createElement('row', 'section-3');
-    // this.createElement('box33', '33-1', 'section-3');
-    // this.createElement('box33', '33-2', 'section-3');
-    // this.createElement('box33', '33-3', 'section-3');
-
-    // this.createElement('row', 'section-4');
-    // this.createElement('box25', '25-1', 'section-4');
-    // this.createElement('box25', '25-2', 'section-4');
-    // this.createElement('box25', '25-3', 'section-4');
-    // this.createElement('box25', '25-4', 'section-4');
 
     this.createElement('row', 'footer');
     this.createElement('box', 'footerContent', 'footer');
@@ -196,6 +149,7 @@ class HomePage extends Component {
         startPoint++;
       }
 
+      // TODO: create a method.
       if ((count >= 2 & listOfWords[firstIndex] === 'with') | (count >= 2 & listOfWords[firstIndex] === 'on')) {
         return elementType.trim();
       } else if (count >= 2) {
